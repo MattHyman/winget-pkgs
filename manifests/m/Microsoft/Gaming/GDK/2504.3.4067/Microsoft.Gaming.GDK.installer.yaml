@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+
+PackageIdentifier: Microsoft.Gaming.GDK
+PackageVersion: 2504.3.4067
+MinimumOSVersion: 10.0.17763.0
+Scope: machine
+InstallerSwitches:
+  Silent: /q
+  SilentWithProgress: /q
+AppsAndFeaturesEntries:
+- DisplayName: Microsoft Game Development Kit - 250403 (April 2025 Update 3)
+  DisplayVersion: 10.1.26100.4067
+ElevationRequirement: elevatesSelf
+Installers:
+- Architecture: x64
+  InstallerType: zip
+  NestedInstallerType: burn
+  NestedInstallerFiles:
+  - RelativeFilePath: PGDK.exe
+  InstallerUrl: https://github.com/microsoft/GDK/releases/download/April-2025-Update-3-v2504.3.4067/GDK_2504.3.4067.zip
+  InstallerSha256: E6C7170DB1BE8C65622292ED42629BAF8C82C9BA2FF7028FF78380DEF50C7CB1
+  ProductCode: '{7035c95f-6def-443e-8f32-c81a3299f27f}'
+ManifestType: installer
+ManifestVersion: 1.6.0
